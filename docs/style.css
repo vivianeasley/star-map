@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0a;
+  background-image: url('/star-map/tile.jpg');
+  background-repeat: repeat;
+  color: #fff;
+  font-family: monospace;
+  overflow: auto;
+}
+
+#mapContainer {
+  position: relative;
+  width: 4000px;
+  height: 4000px;
+  margin: 20px;
+}
+
+.star {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #ffffff 0%, #4a90e2 100%);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgba(74, 144, 226, 0.6);
+}
+
+.star:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(74, 144, 226, 0.9);
+}
+
+.star.selected {
+  outline: 3px solid #00ff88;
+  outline-offset: 2px;
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.8);
+}
+
+#info {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(20, 20, 30, 0.9);
+  padding: 15px;
+  max-width: 300px;
+  border-left-style: solid;
+  border-left-width: 4px;
+  border-left-color: #4a90e2;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.info-text {
+  white-space: pre-wrap;
+}
+
+.star-name {
+  color: white;
+  position: absolute;
+}
